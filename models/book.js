@@ -83,14 +83,14 @@ class Book {
                              year)
             VALUES
               ($1, $2, $3, $4, $5, $6, $7, $8)
-            RETURNING (isbn,
+            RETURNING isbn,
                        title,
                        author,
                        language,
                        pages,
                        publisher,
                        amazon_url,
-                       year)`,
+                       year`,
         [
           data.isbn,
           data.title,
@@ -126,14 +126,14 @@ class Book {
                amazon_url=$6,
                year=$7
              WHERE isbn = $8
-             RETURNING (isbn,
+             RETURNING isbn,
                         title,
                         author,
                         language,
                         pages,
                         publisher,
                         amazon_url,
-                        year)`,
+                        year`,
         [
           data.title,
           data.author,
